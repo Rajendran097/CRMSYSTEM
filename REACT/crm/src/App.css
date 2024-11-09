@@ -1,0 +1,81 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.AppHeader {
+  display:flex;
+  align-items: center;
+  height: 50%; /* Adjust to fill the Header height */
+  padding: 4px 20px; 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  justify-content: space-between; 
+  background-color: #f0f2f5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  margin-right: auto; 
+}
+
+.headerTitle {
+  margin: 0; 
+}
+
+.notificationIcons {
+  margin-left: auto; 
+}
+
+.AppFooter {
+  padding: 10px;
+  height: 50px; 
+  display: flex;
+  text-align: center;
+  position: relative;
+  justify-content: space-evenly; 
+  align-items: center; 
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #fff; 
+  width: 100%;
+}
+
+/* Content Flex Properties */
+.Content {
+  flex: 1; /* This will allow it to take up remaining space */
+}
+
+/* Ensure the layout doesn't overflow */
+.SidemenuAndPageContent {
+  display: flex;
+  flex: 1; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  overflow: hidden; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .AppHeader {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .headerTitle {
+        position: static; 
+    }
+
+    .notificationIcons {
+        margin: 10px 0; 
+    }
+
+    .AppFooter {
+        flex-direction: column; 
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+}
